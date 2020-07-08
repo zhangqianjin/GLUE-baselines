@@ -92,7 +92,7 @@ def format_mrpc(data_dir, path_to_data):
     with io.open(mrpc_test_file, encoding='utf-8') as data_fh, \
             io.open(os.path.join(mrpc_dir, "test.tsv"), 'w', encoding='utf-8') as test_fh:
         header = data_fh.readline()
-        test_fh.write("index\t#1 ID\t#2 ID\t#1 String\t#2 String\n")
+        test_fh.write(unicode("index\t#1 ID\t#2 ID\t#1 String\t#2 String\n"))
         for idx, row in enumerate(data_fh):
             label, id1, id2, s1, s2 = row.strip().split('\t')
             test_fh.write("%d\t%s\t%s\t%s\t%s\n" % (idx, id1, id2, s1, s2))
