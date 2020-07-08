@@ -2,29 +2,10 @@
 This repo contains the code for baselines for the [Generalized Language Understanding Evaluation](https://gluebenchmark.com/) (GLUE) benchmark.
 See [our paper](https://openreview.net/pdf?id=rJ4km2R5t7) for more details about GLUE or the baselines.
 
-# Deprecation Warning
-
-Use this code to reproduce our baselines. If you want code to use as a starting point for new development, though, we strongly recommend using [jiant](https://github.com/jsalt18-sentence-repl/jiant) instead—it's a much more extensive and much better-documented toolkit built around the same goals.
-
-## Dependencies
-
-Make sure you have installed the packages listed in environment.yml.
-When listed, specific particular package versions are required.
-If you use conda, you can create an environment from this package with the following command:
-
-```
-conda env create -f environment.yml
-```
-
-Note: The version of AllenNLP available on pip may not be compatible with PyTorch 0.4, in which we recommend installing from [source](https://github.com/allenai/allennlp).
 
 ## Downloading GLUE
 
 We provide a convenience python script for downloading all GLUE data and standard splits.
-
-```
-python download_glue_data.py --data_dir glue_data --tasks all
-```
 
 After downloading GLUE, point ``PATH_PREFIX`` in  ``src/preprocess.py`` to the directory containing the data.
 
